@@ -1,6 +1,7 @@
 package compiler;
 
 import ast.*;
+import lexer.SourceReader;
 import parser.Parser;
 //import constrain.Constrainer;
 //import codegen.*;
@@ -24,9 +25,10 @@ public class Compiler {
     
     void compileProgram() {
         try {
-            System.out.println("---------------TOKENS-------------");
+            //System.out.println("---------------TOKENS-------------");
             Parser parser = new Parser(sourceFile);
             AST t = parser.execute();
+            SourceReader.printSourceList();
             System.out.println("---------------AST-------------");
             PrintVisitor pv = new PrintVisitor();
             t.accept(pv);

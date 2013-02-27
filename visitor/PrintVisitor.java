@@ -68,14 +68,17 @@ public class PrintVisitor extends ASTVisitor {
     public Object visitCallTree(AST t) { print("Call",t);  return null; }
     public Object visitDeclTree(AST t) { print("Decl",t);  return null; }
     public Object visitIntTypeTree(AST t) { print("IntType",t);  return null; }
+    public Object visitFloatTypeTree(AST t) { print("FloatType",t);  return null; }
     public Object visitBoolTypeTree(AST t) { print("BoolType",t);  return null; }
     public Object visitFormalsTree(AST t) { print("Formals",t);  return null; }
     public Object visitActualArgsTree(AST t) { print("ActualArgs",t);  return null; }
     public Object visitIfTree(AST t) { print("If",t);  return null; }
     public Object visitWhileTree(AST t) { print("While",t);  return null; }
+    public Object visitRepeatTree(AST t) { print("Repeat",t);  return null; }
     public Object visitReturnTree(AST t) { print("Return",t);  return null; }
     public Object visitAssignTree(AST t) { print("Assign",t);  return null; }
     public Object visitIntTree(AST t) { print("Int: "+((IntTree)t).getSymbol().toString(),t);  return null; }
+    public Object visitFloatTree(AST t) { print("Float: "+((FloatTree)t).getSymbol().toString(),t);  return null; }
     public Object visitIdTree(AST t) { print("Id: "+((IdTree)t).getSymbol().toString(),t);  return null; }
     public Object visitRelOpTree(AST t) { print("RelOp: "+((RelOpTree)t).getSymbol().toString(),t);  return null; }
     public Object visitAddOpTree(AST t) { print("AddOp: "+((AddOpTree)t).getSymbol().toString(),t);  return null; }
